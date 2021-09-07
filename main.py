@@ -7,6 +7,8 @@ def main():
     get_data(URL)
     check_string_for_goal('GOAL by STEVENS Cristiano Hocken (FIRST GOAL), Assist by Adam Silva.')
     check_list_for_goals(get_data(URL))
+    get_goal_times(get_data(URL))
+    get_goal_scores(get_data(URL))
 
 if __name__ == "__main__":
     main()
