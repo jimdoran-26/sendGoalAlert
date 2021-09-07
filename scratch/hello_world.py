@@ -25,5 +25,22 @@ text = '\n'.join(chunk for chunk in chunks if chunk)
 #print(text)
 
 list_of_events = text.split('\n')
-for row in list_of_events:
-    print(row)
+#for row in list_of_events:
+#    print(row)
+
+cut=0
+for i in range(len(list_of_events)):
+    if list_of_events[i] == '00:00':
+        cut=i
+
+print(len(list_of_events))
+print(cut)
+print(list_of_events[cut:])
+
+goals = []
+for i in range(len(list_of_events)):
+    if list_of_events[i].__contains__('GOAL'):
+        goals+=[i]
+print(goals)
+
+print(list_of_events[907],list_of_events[912],list_of_events[1064],list_of_events[1069])
